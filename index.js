@@ -7,9 +7,9 @@
  * 
  * Designed to return the given input value.
  * 
- * @param: {*}, Value: Can be any datatype.
+ * @param: {*}, value: Can be any datatype.
  * 
- * @return: {*}, Value: The given input value, unchanged.
+ * @return: {*}, value: The given input value, unchanged.
  * 
  */
  
@@ -24,9 +24,9 @@ module.exports.identity = identity;
  * 
  * Designed to take an input value and return its datatype as a string.
  * 
- * @param: {*}, Value: Can be any datatype.
+ * @param: {*}, value: Can be any datatype.
  * 
- * @return: {String}, "", the input value's datatype returned as a string.
+ * @return: {String}, the input value's datatype returned as a string.
  * 
  */
  
@@ -59,11 +59,11 @@ module.exports.typeOf = typeOf;
  * or if the number is negative, an empty array will be returned. If the array is empty, the first element of the array
  * will be returned. If the number is greater than the length of the array, the whole array will be returned.
  * 
- * @param: {Array}, []: Can be any array.
+ * @param: {Array}, array: Can be any array.
  * 
- * @param: {Number}, Number: Can be any number.
+ * @param: {Number}, number: Can be any number.
  * 
- * @return: {*}, Value(s): The first number of specified elements, which can be any datatype.
+ * @return: {*}, value(s): The first number of specified elements, which can be any datatype.
  * 
  */
  
@@ -96,9 +96,9 @@ module.exports.first = first;
  * whole array is returned. If the array is empty or a number is not given, the last element of the array will be
  * returned.
  * 
- * @param: {Array}, []: Can be any array.
+ * @param: {Array}, array: Can be any array.
  * 
- * @param: {Number}, Number: Can be any number.
+ * @param: {Number}, number: Can be any number.
  * 
  * @return: {*}, the last number of specified elements, which can be any datatype.
  */
@@ -134,11 +134,11 @@ module.exports.first = first;
  * the index of its first occurrence will be returned. If the value is not found within the array, -1 will be 
  * returned.
  * 
- * @param: {Array}, []: Can be any array.
+ * @param: {Array}, array: Can be any array.
  * 
- * @param: {*}, Value: Can be any datatype.
+ * @param: {*}, value: Can be any datatype.
  * 
- * @return: {Number}, Number: Number representing the index of the given value. 
+ * @return: {Number}: Number representing the index of the given value. 
  * 
  */
  
@@ -161,9 +161,9 @@ module.exports.indexOf = indexOf;
  * Designed to return a Boolean value. If a given array contains a given value, will return true. Will return
  * false, otherwise. 
  * 
- * @param: {Array}, []: Can be any array.
+ * @param: {Array}, array: Can be any array.
  * 
- * @param: {*}, Value: Can be any datatype.
+ * @param: {*}, value: Can be any datatype.
  * 
  * @return: {Boolean}, will return either true or false.
  * 
@@ -182,10 +182,10 @@ module.exports.contains = contains;
  * each: Designed to loop over a collection, Array or Object, and applies the 
  * action Function to each value in the collection.
  * 
- * @param {Array or Object}, Collection: The array, [], or object, {} over which to iterate. 
+ * @param {Array or Object}, collection: The array, [], or object, {} over which to iterate. 
  * Can be any array or object.
  * 
- * @param {Function} Action: A function that will perform an action on the array's/object's elements/properties, indices/key/value pairs, 
+ * @param {Function} action: A function that will perform an action on the array's/object's elements/properties, indices/key/value pairs, 
  * and the entire array or object. 
  * 
  */
@@ -209,9 +209,9 @@ module.exports.each = each;
  * 
  * Designed to remove all duplicates within an array and return a new array with only unique values.
  * 
- * @param: {Array}, []: Can be any array with duplicate elements.
+ * @param: {Array}, array: Can be any array with duplicate elements.
  * 
- * @return: {A new array}, [], with unique values and all duplicates removed.
+ * @return: {Array}, a new array with unique values and all duplicates removed.
  * 
  */
  
@@ -237,12 +237,12 @@ module.exports.unique = unique;
  * Designed to take an array and pass a function over its elements. All elements that evaluate to true
  * after the function passes over it are pushed into a new array with all truthy values. 
  * 
- * @param: {Array}, []: Can be any array.
+ * @param: {Array}, array: Can be any array.
  * 
- * @param: {Function}, Action: A function that will perform an action on the array's elements, indices, 
+ * @param: {Function}, action: A function that will perform an action on the array's elements, indices, 
  * and the entire array.
  * 
- * @return: {Array}, [], a new array with all values that returned true.
+ * @return: {Array}, a new array with all values that returned true.
  * 
  */
  
@@ -269,12 +269,12 @@ module.exports.filter = filter;
  * the function has passed over them, then they are pushed into a new array with all other elements that returned
  * false.
  * 
- * @param: {Array}, []: Can be any array.
+ * @param: {Array}, array: Can be any array.
  * 
- * @param: {Function}, Action: A function that will perform an action on the array's elements, indices, 
+ * @param: {Function}, action: A function that will perform an action on the array's elements, indices, 
  * and the entire array.
  * 
- * @return: {Array}, [], a new array with all elements that returned false.
+ * @return: {Array}, a new array with all elements that returned false.
  * 
  */
  
@@ -302,12 +302,12 @@ module.exports.reject = reject;
  * the elements that returned true into a new array, will push all the elements that returned false into a separate 
  * array, and will push both of the subarrays into a final array in which they are contained.
  * 
- * @param: {Array}, []: Can be any array.
+ * @param: {Array}, array: Can be any array.
  * 
- * @param: {Function}, Action: A function that will perform an action on the array's elements, indices,
+ * @param: {Function}, action: A function that will perform an action on the array's elements, indices,
  * and the entire array.
  * 
- * @return: {Array}, [], will return an array containing two subarrays.
+ * @return: {Array}, will return an array containing two subarrays.
  * 
  */
  
@@ -336,12 +336,12 @@ module.exports.partition = partition;
  * Designed to take in a collection (array or object) and pass a function over its contents. Will push all of the 
  * modified elements/properties into a new array once the function has been called over all of its contents.
  * 
- * @param: {Array or Object}, Collection: Can be any array, [], or object, {}.
+ * @param: {Array or Object}, collection: Can be any array, [], or object, {}.
  * 
- * @param: {Function}, Action: A function that will perform an action on the collection's elements/properties, indices/key/value
+ * @param: {Function}, action: A function that will perform an action on the collection's elements/properties, indices/key/value
  * pairs, and over the entire array or object.
  * 
- * @return: {Array}, [], will return an array with the modified elements/properties.
+ * @return: {Array}, will return an array with the modified elements/properties.
  * 
  */ 
  
@@ -370,11 +370,11 @@ module.exports.map = map;
  * 
  * Designed to map over an array containing objects and return all of its values as strings within a new array.
  * 
- * @param: {Array}, []: Can be any array containing objects.
+ * @param: {Array}, arrayOfObjs: Can be any array containing objects.
  * 
- * @param: {String}, "", Property: A string representing the name of the object's key property.
+ * @param: {String}, prop: A string representing the name of the object's key property.
  * 
- * @return: {Array}, [], a new array containing the object's values represented as strings.
+ * @return: {Array}, a new array containing the object's values represented as strings.
  * 
  */
  
@@ -398,9 +398,9 @@ module.exports.pluck = pluck;
  * true after the function is called, or if there are truthy results and no function is given. Will return false if at least one element/property 
  * returns false or if there are falsey results and no function is given.
  * 
- * @param: {Array or Object}, Collection: Can be any array, [], or object, {}.
+ * @param: {Array or Object}, collection: Can be any array, [], or object, {}.
  * 
- * @param: {Function}, Action: A function that will perform an action on the collection's contents.
+ * @param: {Function}, action: A function that will perform an action on the collection's contents.
  * 
  * @return: {Boolean}, returns either true or false.
  * 
@@ -432,9 +432,9 @@ module.exports.every = every;
  * true after the function is called, or if there are truthy results and no function is given. Will return false when no element/property 
  * returns true or if no function is given and all values are falsey.
  * 
- * @param: {Array or Object}, Collection: Can be any array, [], or object, {}.
+ * @param: {Array or Object}, collection: Can be any array, [], or object, {}.
  * 
- * @param: {Function}, Action: A function that will perform an action on the collection's contents.
+ * @param: {Function}, action: A function that will perform an action on the collection's contents.
  * 
  * @return: {Boolean}, returns either true or false.
  * 
@@ -465,11 +465,11 @@ module.exports.some = some;
  * and return the result of the function call. If no seed is given, the seed will be assigned to the first element
  * of the array.
  * 
- * @param: {Array}, []: Can be any array.
+ * @param: {Array}, array: Can be any array.
  * 
- * @param: {Function}, Action: A function that will perform an action on the collection's contents.
+ * @param: {Function}, action: A function that will perform an action on the collection's contents.
  * 
- * @param: {*}, Seed: Can be any value and datatype.
+ * @param: {*}, seed: Can be any value and datatype.
  * 
  * @return: {*}, will return the result of the function call upon the array's elements. 
  * 
@@ -493,11 +493,11 @@ module.exports.reduce = reduce;
  * 
  * Designed to take in multiple objects and update the first object with the other provided objects' properties.
  * 
- * @param: {Object}, {}: Can be any object.
+ * @param: {Object}, object: Can be any object.
  * 
- * @param: {Object}, {}: Any specified number of other objects.
+ * @param: {Object}, ...objects: Any specified number of other objects.
  * 
- * @return: {Object}, {}, the first object, updated with the other objects' properties.
+ * @return: {Object}, object, the first object, updated with the other objects' properties.
  * 
  */
  
@@ -514,5 +514,5 @@ module.exports.reduce = reduce;
     
     return object;
     
-};
+}
 module.exports.extend = extend;
